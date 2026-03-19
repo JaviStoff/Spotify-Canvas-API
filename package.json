@@ -15,6 +15,7 @@
         "axios": "^1.6.0",
         "express": "latest",
         "google-protobuf": "^3.11.4",
+        "cors": "^2.8.5",
         "otpauth": "latest",
         "dotenv": "latest"
     }
