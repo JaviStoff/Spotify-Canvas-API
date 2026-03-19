@@ -1,12 +1,16 @@
 import express from 'express';
+import cors from 'cors';
 import axios from 'axios';
 import canvasRoutes from './routes/canvasRoutes.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || '*'
+}));
 app.use('/api/canvas', canvasRoutes);
 
 app.listen(PORT, function () {
